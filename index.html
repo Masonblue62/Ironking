@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TheIronKingVR • Gorilla Tag</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap');
+        
+        body {
+            font-family: 'VT323', monospace;
+        }
+        
+        :root {
+            --primary: #ff0000;
+            --accent: #ffd700;
+        }
+        
+        .hero-bg {
+            background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), 
+                        url('images/channels4_banner.jpg') center/cover no-repeat;
+            background-attachment: fixed;
+        }
+        
+        .nav-link {
+            transition: all 0.3s ease;
+        }
+        .nav-link:hover {
+            color: var(--accent) !important;
+            transform: scale(1.1);
+            text-shadow: 0 0 15px var(--accent);
+        }
+        
+        .video-card {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .video-card:hover {
+            transform: scale(1.08) translateY(-15px) rotate(1deg);
+            box-shadow: 0 35px 70px -15px rgb(255 215 0 / 0.6);
+        }
+        
+        .glow-red { text-shadow: 0 0 20px #ff0000, 0 0 40px #ff0000; }
+        .glow-gold { text-shadow: 0 0 20px #ffd700, 0 0 40px #ffd700; }
+        
+        .floating {
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+        
+        .crown {
+            animation: crown-shine 4s linear infinite;
+        }
+        
+        @keyframes crown-shine {
+            0% { filter: drop-shadow(0 0 10px #ffd700); }
+            50% { filter: drop-shadow(0 0 25px #ffd700); }
+            100% { filter: drop-shadow(0 0 10px #ffd700); }
+        }
+    </style>
+</head>
+<body class="bg-zinc-950 text-white overflow-x-hidden">
+    <!-- NAVBAR -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-black/95 backdrop-blur-md border-b-4 border-red-600">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+            <div class="flex items-center gap-4">
+                <img src="images/channels4_profile.jpg" 
+                     class="w-16 h-16 rounded-full border-4 border-yellow-400 object-cover crown" alt="TheIronKingVR">
+                <div>
+                    <h1 class="text-4xl font-bold tracking-widest glow-red">THEIRONKING<span class="text-yellow-400">VR</span></h1>
+                </div>
+            </div>
+            
+            <div class="flex gap-10 text-xl">
+                <a href="#home" class="nav-link">HOME</a>
+                <a href="#videos" class="nav-link">VIDEOS</a>
+                <a href="#about" class="nav-link">ABOUT</a>
+                <a href="#community" class="nav-link">COMMUNITY</a>
+            </div>
+            
+            <a href="https://www.youtube.com/@TheIronKing-Official" target="_blank"
+               class="px-8 py-3 bg-red-600 hover:bg-red-700 font-bold rounded-xl flex items-center gap-3 transition-all hover:scale-110">
+                <i class="fab fa-youtube text-2xl"></i> SUBSCRIBE
+            </a>
+        </div>
+    </nav>
+
+    <!-- HERO with your Banner -->
+    <section id="home" class="hero-bg h-screen flex items-center relative">
+        <div class="max-w-6xl mx-auto px-6 text-center z-10">
+            <div class="inline-flex items-center gap-3 bg-black/70 px-8 py-3 rounded-full border-2 border-yellow-400 mb-8 floating">
+                <span class="text-4xl">👑</span>
+                <span class="text-2xl text-yellow-300">Getting my crown back, one lobby at a time</span>
+            </div>
+            
+            <h1 class="text-8xl md:text-[120px] font-bold tracking-tighter leading-none glow-red mb-4">
+                THE IRON<br>KING
+            </h1>
+            <p class="text-5xl text-yellow-300 mb-12">GORILLA TAG • VR CHAOS • BANANA SUPREMACY</p>
+            
+            <div class="flex flex-col sm:flex-row gap-6 justify-center">
+                <a href="#videos" 
+                   class="px-14 py-6 bg-red-600 hover:bg-red-500 text-3xl font-bold rounded-2xl transition-all flex items-center justify-center gap-4 hover:scale-110">
+                    <i class="fas fa-play"></i> LATEST BATTLES
+                </a>
+                <a href="#community" 
+                   class="px-14 py-6 border-4 border-yellow-400 text-3xl font-bold rounded-2xl hover:bg-yellow-400 hover:text-black transition-all hover:scale-110">
+                    JOIN THE ARMY
+                </a>
+            </div>
+        </div>
+        
+        <div class="absolute bottom-12 left-1/2 text-7xl floating" style="animation-delay: 0.8s;">🦍</div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="py-24 bg-zinc-900">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <div>
+                    <h2 class="text-6xl font-bold mb-8 glow-red">ABOUT THE KING</h2>
+                    <p class="text-2xl text-zinc-300 leading-relaxed mb-6">
+                        TheIronKingVR is a Gorilla Tag creator whose life story is about courage, community, and finding his own path.
+                        He came out as gay to his family, left a tough fast-food job, and turned his love for VR into a platform that celebrates who he is.
+                        Along the way he found love with his girlfriend, who is transgender, and their relationship is a proud part of the journey.
+                    </p>
+                    <p class="text-2xl text-zinc-300 leading-relaxed">
+                        Movement tech, update reactions, funny moments, and pure chaos in VR are the heart of the channel,
+                        but the journey from coming out to choosing creation — and sharing it with his trans girlfriend — is what really defines The Iron King.
+                    </p>
+                </div>
+                <div class="flex justify-center">
+                    <img src="images/channels4_profile.jpg" 
+                         class="w-80 h-80 rounded-3xl border-8 border-yellow-400 object-cover shadow-2xl crown" alt="Profile">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- VIDEOS -->
+    <section id="videos" class="py-24 bg-black">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-6xl font-bold text-center mb-16 glow-red">LATEST VIDEOS</h2>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Video 1 -->
+                <div class="video-card bg-zinc-900 rounded-3xl overflow-hidden border-2 border-red-900">
+                    <a href="https://www.youtube.com/watch?v=PEPsV9OJvbU" target="_blank" class="block">
+                        <img src="https://i.ytimg.com/vi/PEPsV9OJvbU/maxresdefault.jpg" class="w-full h-52 object-cover">
+                    </a>
+                    <div class="p-6">
+                        <h3 class="font-bold text-xl mb-3 leading-tight">NEW Mountains Cosmetics + Tunnel!</h3>
+                        <a href="https://www.youtube.com/watch?v=PEPsV9OJvbU" target="_blank" class="text-yellow-400 hover:text-yellow-300">WATCH ON YOUTUBE →</a>
+                    </div>
+                </div>
+
+                <!-- Video 2 -->
+                <div class="video-card bg-zinc-900 rounded-3xl overflow-hidden border-2 border-red-900">
+                    <a href="https://www.youtube.com/watch?v=H_4iSF9tOCo" target="_blank" class="block">
+                        <img src="https://i.ytimg.com/vi/H_4iSF9tOCo/maxresdefault.jpg" class="w-full h-52 object-cover">
+                    </a>
+                    <div class="p-6">
+                        <h3 class="font-bold text-xl mb-3 leading-tight">Gorilla Tag's New FOOD FIGHT Update (Thanksgiving!)</h3>
+                        <a href="https://www.youtube.com/watch?v=H_4iSF9tOCo" target="_blank" class="text-yellow-400 hover:text-yellow-300">WATCH ON YOUTUBE →</a>
+                    </div>
+                </div>
+
+                <!-- Video 3 -->
+                <div class="video-card bg-zinc-900 rounded-3xl overflow-hidden border-2 border-red-900">
+                    <a href="https://www.youtube.com/watch?v=BEvNkrF8kks" target="_blank" class="block">
+                        <img src="https://i.ytimg.com/vi/BEvNkrF8kks/maxresdefault.jpg" class="w-full h-52 object-cover">
+                    </a>
+                    <div class="p-6">
+                        <h3 class="font-bold text-xl mb-3 leading-tight">Gorilla Tag's HALLOWEEN Update!</h3>
+                        <a href="https://www.youtube.com/watch?v=BEvNkrF8kks" target="_blank" class="text-yellow-400 hover:text-yellow-300">WATCH ON YOUTUBE →</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-16">
+                <a href="https://www.youtube.com/@TheIronKing-Official/videos" target="_blank"
+                   class="inline-block px-16 py-6 border-4 border-yellow-400 hover:bg-yellow-400 hover:text-black text-3xl font-bold rounded-2xl transition-all">
+                    SEE ALL VIDEOS →
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- COMMUNITY -->
+    <section id="community" class="py-24 bg-zinc-900">
+        <div class="max-w-6xl mx-auto px-6 text-center">
+            <h2 class="text-6xl font-bold mb-8 glow-red">JOIN THE IRON ARMY</h2>
+            <p class="text-3xl text-yellow-300 mb-12">The most chaotic Gorilla Tag community</p>
+            
+            <div class="grid md:grid-cols-3 gap-10 max-w-5xl mx-auto">
+                <!-- Discord -->
+                <div class="bg-zinc-800 p-10 rounded-3xl border-2 border-indigo-500 hover:border-indigo-400 transition-all hover:scale-105">
+                    <i class="fab fa-discord text-7xl text-indigo-400 mb-6"></i>
+                    <h3 class="text-4xl mb-4">Official Discord</h3>
+                    <p class="text-zinc-400 mb-8">Meet other monkes, get early updates, memes, and hang out with the King</p>
+                    <a href="https://discord.gg/9rZ47vc5S6" target="_blank"
+                       class="block w-full py-5 bg-indigo-600 hover:bg-indigo-500 text-xl font-bold rounded-2xl">
+                        JOIN DISCORD
+                    </a>
+                </div>
+
+                <div class="bg-zinc-800 p-10 rounded-3xl border-2 border-red-500 hover:border-red-400 transition-all hover:scale-105">
+                    <i class="fab fa-youtube text-7xl text-red-500 mb-6"></i>
+                    <h3 class="text-4xl mb-4">YouTube</h3>
+                    <p class="text-zinc-400 mb-8">New videos almost every week</p>
+                    <a href="https://www.youtube.com/@TheIronKing-Official" target="_blank"
+                       class="block w-full py-5 bg-red-600 hover:bg-red-500 text-xl font-bold rounded-2xl">
+                        SUBSCRIBE
+                    </a>
+                </div>
+
+                <div class="bg-zinc-800 p-10 rounded-3xl border-2 border-yellow-500 hover:border-yellow-400 transition-all hover:scale-105">
+                    <i class="fas fa-users text-7xl text-yellow-400 mb-6"></i>
+                    <h3 class="text-4xl mb-4">Banana Clan</h3>
+                    <p class="text-zinc-400 mb-8">Competitive & casual Gorilla Tag group</p>
+                    <button onclick="alert('Banana Clan recruitment coming soon! Join Discord for info.')" 
+                            class="block w-full py-5 bg-yellow-600 hover:bg-yellow-500 text-xl font-bold rounded-2xl">
+                        LEARN MORE
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-black py-16 border-t-4 border-red-600">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <div class="text-6xl mb-6">👑 🦍 🔥</div>
+            <p class="text-3xl text-yellow-300">THE IRON ARMY</p>
+            <p class="text-zinc-500 mt-8">Fan-made tribute website • All content belongs to TheIronKingVR</p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                if (this.getAttribute('href') !== '#') {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        console.log('%cTheIronKingVR Website Loaded 👑', 'color:#ffd700; font-size:18px');
+    </script>
+</body>
+</html>
